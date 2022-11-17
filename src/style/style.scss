@@ -8,29 +8,34 @@ $bg: linear-gradient(
 * {
   margin: 0;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 html {
   overflow-x: hidden;
-  font-family: "Courier New", Courier, monospace;
+  scroll-behavior: smooth;
+  background: $bg;
+  background-position: fixed;
+  color: $text;
 }
 
 .section1 {
   width: 100vw;
   height: 100vh;
-  background: rgb(179, 27, 152);
-  background: $bg;
-  color: $text;
   .nav1 {
-    width: 50%;
+    width: 20%;
     height: 10%;
     float: left;
     .hamburger--menu {
       width: 3rem;
       height: 3rem;
-      margin: 1rem;
+      top: 1rem;
+      left: 1.5rem;
+      position: absolute;
+      position: fixed;
       background-color: transparent;
       cursor: pointer;
+      z-index: 9;
       @mixin bar {
         width: 100%;
         height: 10%;
@@ -50,7 +55,7 @@ html {
     }
   }
   .nav2 {
-    width: 50%;
+    width: 80%;
     display: flex;
     float: left;
     justify-content: right;
@@ -62,39 +67,134 @@ html {
     margin-right: 6rem;
     font-size: 2rem;
     margin-top: 2%;
+    cursor: pointer;
   }
-  .leftSide {
-    width: 50%;
-    height: 80%;
-    clear: both;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .menu {
+    width: 23rem;
+    background-color: rgb(37, 29, 29);
+    height: 100%;
+    position: absolute;
+    left: -23rem;
+    top: 0;
+    position: fixed;
+    z-index: 8;
   }
-  .gettingStarted {
-    width: 10rem;
-    height: 3rem;
+  .main {
+    width: 100%;
+    height: 90%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    outline: 2px solid white;
-    border-radius: 1;
-    appearance: button;
-    color: $text;
-    font-size: 1rem;
-    font-weight: bold;
 
-    &:hover {
-      transition: all 0.3s linear;
-      background-color: white;
-      color: rgba(131, 114, 186, 1);
-      cursor: pointer;
+    .leftSide {
+      width: 50%;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .gettingStarted {
+        width: 10rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        outline: 2px solid white;
+        border-radius: 1;
+        appearance: button;
+        color: $text;
+        font-size: 1rem;
+        font-weight: bold;
+
+        &:hover {
+          transition: all 0.3s linear;
+          background-color: white;
+          color: rgba(131, 114, 186, 1);
+          cursor: pointer;
+        }
+      }
+    }
+    .rightSide {
+      width: 50%;
+      display: block;
+      p {
+        position: relative;
+        top: 20rem;
+        font-size: 2.5rem;
+        margin-left: 10rem;
+        width: 100%;
+        &:first-child {
+          top: 20.4rem;
+          text-decoration: underline;
+        }
+        &:nth-child(2) {
+          margin-left: 25rem;
+          text-decoration: overline;
+        }
+        &:last-child {
+          margin-left: 25rem;
+        }
+      }
     }
   }
 }
 
 .section2 {
+  color: $text;
   width: 100vw;
   height: 100vh;
+  article {
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      width: 50%;
+      font-size: 1.5rem;
+      &::first-letter {
+        font-size: 5rem;
+      }
+    }
+  }
+  aside {
+    width: 50%;
+    height: 100%;
+    float: left;
+    font-size: 1.2rem;
+    .img--container1 {
+      width: 100%;
+      height: 33%;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      article {
+        transform: translate(-10rem);
+      }
+      .pug {
+        transform: scale(1rem);
+        transform: translate(-5rem);
+      }
+    }
+    .img--container2 {
+      width: 100%;
+      height: 33%;
+      display: flex;
+
+      .gsap {
+        float: right;
+        transform: scale(2rem);
+      }
+    }
+    .img--container3 {
+      width: 100%;
+      height: 33%;
+      display: flex;
+      justify-content: right;
+      align-items: right;
+      .sass {
+        transform: scale(0.5);
+      }
+    }
+  }
 }
