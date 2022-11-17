@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.pug",
+    "start": "parcel index.pug",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +17,7 @@
     "@parcel/transformer-pug": "^2.8.0",
     "@parcel/transformer-sass": "^2.8.0",
     "gsap": "^3.11.3",
-    "sass": "^1.56.1"
+    "sass": "^1.56.1",
+    "scrolltrigger": "^1.0.1"
   }
 }

@@ -1,30 +1,93 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Courier New, Courier, monospace;
 }
 
-@keyframes kolorki {
-  to {
-    background-position: 200%;
-  }
+html {
+  font-family: Courier New, Courier, monospace;
+  overflow-x: hidden;
 }
 
-.container {
+.section1 {
   width: 100vw;
   height: 100vh;
-  background-color: red;
+  color: #ddd;
+  background: linear-gradient(115deg, #b31b98 0%, #8372ba 49%, #00d4ff 100%);
+}
+
+.section1 .nav1 {
+  width: 50%;
+  height: 10%;
+  float: left;
+}
+
+.section1 .nav1 .hamburger--menu {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: #0000;
+  margin: 1rem;
+}
+
+.section1 .nav1 .hamburger--menu .bar1, .section1 .nav1 .hamburger--menu .bar2, .section1 .nav1 .hamburger--menu .bar3 {
+  width: 100%;
+  height: 10%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 20%;
+}
+
+.section1 .nav2 {
+  width: 50%;
+  float: left;
+  justify-content: right;
+  align-items: center;
+  display: flex;
+}
+
+.section1 ul li {
+  float: left;
+  margin-top: 2%;
+  margin-right: 6rem;
+  font-size: 2rem;
+  list-style-type: none;
+}
+
+.section1 .leftSide {
+  width: 50%;
+  height: 80%;
+  clear: both;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.container p {
-  background: -webkit-linear-gradient(90deg, #020024 0%, #5252a4 35%, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;
-  font-size: 3rem;
-  animation: 1s linear kolorki;
+.section1 .gettingStarted {
+  width: 10rem;
+  height: 3rem;
+  appearance: button;
+  color: #ddd;
+  background: none;
+  border-radius: 1px;
+  outline: 2px solid #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+}
+
+.section1 .gettingStarted:hover {
+  color: #8372ba;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all .3s linear;
+}
+
+.section2 {
+  width: 100vw;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=index.08963856.css.map */
