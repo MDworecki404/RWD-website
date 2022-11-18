@@ -6,8 +6,6 @@
 
 html {
   scroll-behavior: smooth;
-  background: linear-gradient(115deg, #b31b98 0%, #8372ba 49%, #00d4ff 100%);
-  background-position: fixed;
   color: #ddd;
   overflow-x: hidden;
 }
@@ -15,6 +13,7 @@ html {
 .section1 {
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(115deg, #b31b98 0%, #8372ba 49%, #00d4ff 100%);
 }
 
 .section1 .nav1 {
@@ -53,10 +52,19 @@ html {
 .section1 ul li {
   float: left;
   cursor: pointer;
+  width: 8vw;
+  text-align: center;
+  border-radius: 5px;
   margin-top: 2%;
   margin-right: 6rem;
-  font-size: 2rem;
+  font-size: 2vw;
   list-style-type: none;
+  transition: all .3s linear;
+}
+
+.section1 ul li:hover {
+  color: #8372ba;
+  background-color: #fff;
 }
 
 .section1 .menu {
@@ -67,6 +75,26 @@ html {
   position: fixed;
   top: 0;
   left: -23rem;
+  overflow: scroll;
+}
+
+.section1 .menu::-webkit-scrollbar {
+  display: none;
+}
+
+.section1 .menu ul {
+  width: 100%;
+  height: 100%;
+}
+
+.section1 .menu ul li {
+  text-align: center;
+  width: 95%;
+  border-bottom: 2px solid #fff;
+  margin-top: 25%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  transform: translate(-25rem);
 }
 
 .section1 .main {
@@ -95,6 +123,7 @@ html {
   align-items: center;
   font-size: 1rem;
   font-weight: bold;
+  transition: all .3s linear;
   display: flex;
 }
 
@@ -102,7 +131,6 @@ html {
   color: #8372ba;
   cursor: pointer;
   background-color: #fff;
-  transition: all .3s linear;
 }
 
 .section1 .main .rightSide {
@@ -136,9 +164,17 @@ html {
   color: #ddd;
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(425deg, #b31b98 0%, #8372ba 49%, #00d4ff 100%);
 }
 
-.section2 article {
+.section2 .articles {
+  color: #ddd;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000;
+}
+
+.section2 .articles article {
   width: 50%;
   height: 100%;
   float: left;
@@ -147,59 +183,62 @@ html {
   display: flex;
 }
 
-.section2 article p {
+.section2 .articles article p {
   width: 50%;
-  font-size: 1.5rem;
+  font-size: 1.2vw;
 }
 
-.section2 article p:first-letter {
-  font-size: 5rem;
+.section2 .articles article p:first-letter {
+  font-size: 3vw;
 }
 
-.section2 aside {
+.section2 .articles aside {
   width: 50%;
   height: 100%;
   float: left;
-  font-size: 1.2rem;
+  font-size: 1vw;
 }
 
-.section2 aside .img--container1 {
+.section2 .articles aside .img--container1 {
   width: 100%;
   height: 33%;
   justify-content: right;
   align-items: center;
+  font-size: 1vw;
   display: flex;
 }
 
-.section2 aside .img--container1 article {
+.section2 .articles aside .img--container1 article {
   transform: translate(-10rem);
 }
 
-.section2 aside .img--container1 .pug {
+.section2 .articles aside .img--container1 .pug {
   transform: scale(1rem);
   transform: translate(-5rem);
 }
 
-.section2 aside .img--container2 {
+.section2 .articles aside .img--container2 {
   width: 100%;
   height: 33%;
+  font-size: 1vw;
   display: flex;
 }
 
-.section2 aside .img--container2 .gsap {
+.section2 .articles aside .img--container2 .gsap {
   float: right;
   transform: scale(2rem);
 }
 
-.section2 aside .img--container3 {
+.section2 .articles aside .img--container3 {
   width: 100%;
   height: 33%;
   justify-content: right;
   align-items: right;
+  font-size: 1vw;
   display: flex;
 }
 
-.section2 aside .img--container3 .sass {
+.section2 .articles aside .img--container3 .sass {
   transform: scale(.5);
 }
 

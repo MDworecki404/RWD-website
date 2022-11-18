@@ -550,6 +550,12 @@ const hamburgerMenuOpen = ()=>{
         const bar1 = document.querySelector(".bar1");
         const bar2 = document.querySelector(".bar2");
         const bar3 = document.querySelector(".bar3");
+        const hamList = document.querySelectorAll(".hamList");
+        (0, _gsap.TweenMax).to(hamList, 0.3, {
+            x: -500,
+            delay: 0.3,
+            stagger: 0.1
+        });
         (0, _gsap.TweenMax).to(bar2, 0.3, {
             x: 0
         });
@@ -570,6 +576,12 @@ const hamburgerMenuOpen = ()=>{
         const bar11 = document.querySelector(".bar1");
         const bar21 = document.querySelector(".bar2");
         const bar31 = document.querySelector(".bar3");
+        const hamList1 = document.querySelectorAll(".hamList");
+        (0, _gsap.TweenMax).to(hamList1, 0.3, {
+            x: 0,
+            delay: 0.3,
+            stagger: 0.1
+        });
         (0, _gsap.TweenMax).to(bar21, 0.3, {
             x: -150
         });
@@ -4596,18 +4608,18 @@ parcelHelpers.defineInteropFlag(exports);
 var _gsap = require("gsap");
 var _scrollTrigger = require("gsap/ScrollTrigger");
 (0, _gsap.gsap).registerPlugin((0, _scrollTrigger.ScrollTrigger));
-const section2 = document.querySelector(".section2");
+const section2 = document.querySelector(".articles");
 const scroll = ()=>{
     (0, _gsap.gsap).fromTo(section2.children, {
-        y: "+=100",
+        x: "+=100",
         opacity: 0
     }, {
-        y: 0,
+        x: 0,
         opacity: 1,
         stagger: 0.2,
         duration: 0.5,
         scrollTrigger: {
-            trigger: ".section2",
+            trigger: ".articles",
             start: "top 30%"
         }
     });
