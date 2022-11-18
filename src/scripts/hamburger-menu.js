@@ -10,7 +10,7 @@ const hamburgerMenuOpen = () => {
     const bar3 = document.querySelector(".bar3");
     const hamList = document.querySelectorAll(".hamList");
 
-    TweenMax.to(hamList, 0.3, { x: -500, delay: 0.3, stagger: 0.1 });
+    TweenMax.to(hamList, 0, { x: -500, delay: 0, stagger: 0 });
     TweenMax.to(bar2, 0.3, { x: 0 });
     TweenMax.to(bar1, 0.3, { y: 0, transform: "rotate(0)" });
     TweenMax.to(bar3, 0.3, { y: 0, transform: "rotate(0)" });

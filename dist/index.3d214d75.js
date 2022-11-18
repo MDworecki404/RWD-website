@@ -551,10 +551,10 @@ const hamburgerMenuOpen = ()=>{
         const bar2 = document.querySelector(".bar2");
         const bar3 = document.querySelector(".bar3");
         const hamList = document.querySelectorAll(".hamList");
-        (0, _gsap.TweenMax).to(hamList, 0.3, {
+        (0, _gsap.TweenMax).to(hamList, 0, {
             x: -500,
-            delay: 0.3,
-            stagger: 0.1
+            delay: 0,
+            stagger: 0
         });
         (0, _gsap.TweenMax).to(bar2, 0.3, {
             x: 0
