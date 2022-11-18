@@ -14,7 +14,7 @@
   .section1 {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(115deg, #b31b98 0%, #8372ba 49%, #00d4ff 100%);
+    background: url("bg.e1192b10.png") fixed;
   }
 
   .section1 .nav1 {
@@ -52,9 +52,13 @@
 
   .section1 ul li {
     float: left;
+    -webkit-text-fill-color: transparent;
     cursor: pointer;
     width: 8vw;
     text-align: center;
+    background: linear-gradient(115deg, #b31b98 0%, #8372ba 49%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     border-radius: 2px;
     margin-top: 2%;
     margin-right: 6rem;
@@ -65,8 +69,6 @@
 
   .section1 ul li:hover {
     color: #8372ba;
-    background-color: #fff;
-    box-shadow: 0 0 5px 5px #ddd;
   }
 
   .section1 .menu {
@@ -167,7 +169,7 @@
     color: #ddd;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(425deg, #b31b98 0%, #8372ba 49%, #00d4ff 100%);
+    background: url("bg.e1192b10.png") fixed;
   }
 
   .section2 .articles {

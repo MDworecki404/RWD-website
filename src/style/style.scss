@@ -21,7 +21,8 @@
   .section1 {
     width: 100vw;
     height: 100vh;
-    background: $bg;
+    background: url("../assets/bg.png");
+    background-attachment: fixed;
     .nav1 {
       width: 20%;
       height: 10%;
@@ -66,6 +67,9 @@
       list-style-type: none;
       margin-right: 6rem;
       font-size: 2vw;
+      background: $bg;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-top: 2%;
       cursor: pointer;
       transition: all 0.3s linear;
@@ -73,9 +77,7 @@
       width: 8vw;
       text-align: center;
       &:hover {
-        background-color: white;
         color: rgba(131, 114, 186, 1);
-        box-shadow: 0px 0px 5px 5px #ddd;
       }
     }
     .menu {
@@ -170,12 +172,8 @@
     color: $text;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(
-      425deg,
-      rgba(179, 27, 152, 1) 0%,
-      rgba(131, 114, 186, 1) 49%,
-      rgba(0, 212, 255, 1) 100%
-    );
+    background: url("../assets/bg.png");
+    background-attachment: fixed;
     .articles {
       color: $text;
       width: 100vw;
