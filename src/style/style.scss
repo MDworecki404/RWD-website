@@ -11,6 +11,28 @@
     padding: 0;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #f5f5f5;
+      border-radius: 0px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0px;
+      background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.44, rgb(122, 153, 217)),
+        color-stop(0.72, rgb(73, 125, 189)),
+        color-stop(0.86, rgb(28, 58, 148))
+      );
+    }
   }
   html {
     overflow-x: hidden;
@@ -67,9 +89,6 @@
       list-style-type: none;
       margin-right: 6rem;
       font-size: 2vw;
-      background: $bg;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
       margin-top: 2%;
       cursor: pointer;
       transition: all 0.3s linear;
@@ -153,11 +172,11 @@
           margin-left: 10rem;
           width: 100%;
           &:first-child {
-            top: 20.4rem;
+            top: 20.25rem;
             text-decoration: underline;
           }
           &:nth-child(2) {
-            margin-left: 25rem;
+            margin-left: 23.7rem;
             text-decoration: overline;
           }
           &:last-child {

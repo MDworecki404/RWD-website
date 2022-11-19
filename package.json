@@ -17,6 +17,7 @@
     "@parcel/transformer-pug": "^2.8.0",
     "@parcel/transformer-sass": "^2.8.0",
     "gsap": "^3.11.3",
+    "parcel-bundler": "^1.12.5",
     "sass": "^1.56.1",
     "scrolltrigger": "^1.0.1"
   }
